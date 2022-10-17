@@ -1,12 +1,13 @@
 <!-- +layout.svelte -->
 <script>
 import Header from '$lib/components/Header.svelte'
-import '$lib/styles/style.scss'
+import '$lib/styles/house.scss'
+import '$lib/styles/entypo.scss'
 </script>
 
 <Header />
 
-<header><h1>Russellbits</h1></header>
+<div id="logo">RUSSELL<span class="secondary">BITS</span></div>
 
 <main>
   <slot />
