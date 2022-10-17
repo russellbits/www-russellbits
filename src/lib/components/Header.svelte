@@ -18,17 +18,10 @@
   </nav>
 </header>
 
-<!--
-Once the preprocessor is installed and working, we can use SCSS anywhere with the following lang attribute
 <style lang="scss">
-// We can write SCSS here!
-</style>
--->
-
-<style>
 header {
   padding: 1rem;
-  background: lightskyblue;
+  background: rgb(147, 37, 189);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

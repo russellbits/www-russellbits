@@ -1,7 +1,7 @@
 <!-- +layout.svelte -->
 <script>
 import Header from '$lib/components/Header.svelte'
-import '$lib/styles/style.css'
+import '$lib/styles/style.scss'
 </script>
 
 <Header />

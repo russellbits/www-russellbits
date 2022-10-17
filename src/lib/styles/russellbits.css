@@ -1,0 +1,768 @@
+/* Potential fonts to use
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+/* Reset
+---------------------------------------------------------------------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+}
+
+/* 30em + (1.618em * 2) = 33.236em / Eliminates potential of horizontal scrolling in most cases */
+body {
+	min-width: 33.236em;
+}
+
+/* now I'm working with a clean slate! */
+
+/* Fonts
+---------------------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url('../fonts/rubik-bold-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Italic';
+    src: url('../fonts/rubik-italic-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Light';
+    src: url('../fonts/rubik-light-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Light Italic';
+    src: url('../fonts/rubik-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Regular';
+    src: url('../fonts/rubik-regular-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Black';
+    src: url('../fonts/rubik-black-webfont.woff2') format('woff2'),
+         url('../fonts/rubik-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AleoLight';
+    src: url('../fonts/Aleo-Light-webfont.eot');
+    src: url('../fonts/Aleo-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Aleo-Light-webfont.woff') format('woff'),
+         url('../fonts/Aleo-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Aleo-Light-webfont.svg#AleoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aleo';
+    src: url('../fonts/Aleo-Regular-webfont.eot');
+    src: url('../fonts/Aleo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Aleo-Regular-webfont.woff') format('woff'),
+         url('../fonts/Aleo-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Aleo-Regular-webfont.svg#AleoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+@font-face {
+    font-family: 'Krungthep';
+    src: url('../fonts/krungthep-webfont.eot');
+    src: url('../fonts/krungthep-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/krungthep-webfont.woff') format('woff'),
+         url('../fonts/krungthep-webfont.ttf') format('truetype'),
+         url('../fonts/krungthep-webfont.svg#AleoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+/* Universal Elements
+---------------------------------------------------------------------------------------- */
+html,
+body {
+	/* The html and body elements cannot have any padding or margin. */
+	/* maxvoltar.com/archive/-webkit-font-smoothing */
+	-webkit-font-smoothing: antialiased;
+	max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+	color: #fff;
+ 	font-family: "Aleo", "Trebuchet MS", Arial, Helvetica, sans serif;
+ 	font-size: 1em;
+ 	background-color: #2E334B;
+}
+
+#logo {
+	font: 10em "Rubik Black", sans-serif;
+	line-height: 0.5em;
+	color: #494CA6;
+	width: 100%;
+	text-align: center;
+	text-shadow: 4px 4px 4px #333333;
+	padding: 80px 0 10px 0;
+	margin: 0;
+	float: none !important;
+}
+
+#logo .secondary {
+	color: #812AB2;
+}
+
+h1 {
+	color: #fff;
+	font: 2.6em "Rubik", "Helvetica", serif;
+	line-height: 1.0em;
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/* text-shadow: 1px 2px #7B28AA; */
+}
+
+h2 {
+	color: #fff;
+	font: 1.8em "Rubik Bold", "Trebucet MS", serif;
+	line-height: 1.0em;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+h3, h3 a {
+	color: #ff00ff;;
+	font: 1.4em "Rubik Bold", "Trebucet MS", serif;
+	font-weight: bold;
+	line-height: 1.0em;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+a {
+	color: #00b1ff;
+}
+
+a:hover {
+	color: #00b1ff;
+	text-decoration: underline;
+}
+
+p {
+	font-family: "Aleo", "Helvetica", serif;
+	font-size: 1.3em;
+	color: white;
+	line-height: 1.8em;
+}
+
+b {
+	color: #00b1ff;
+}
+
+table {
+	background-color: #fff;
+	border: 1px solid gray;
+	display: table-cell;
+}
+
+th {
+	font: 12px "Trebuchet MS", serif;
+	color: #333;
+	padding: 5px;
+	display: table-cell;
+}
+
+tr {}
+
+td {
+	font: 12px "Trebuchet MS", serif;
+	color: #333;
+	padding: 5px;
+	display: table-cell;
+}
+
+/* Menus
+---------------------------------------------------------------------------------------- */
+ul#socialbits {
+	list-style-type: none;
+	display: block;
+	position: fixed;
+	top: 8px;
+	left: 10px;
+	width: 220px;
+	z-index: 10000;
+}
+ul#socialbits li {
+	display: table-cell;
+	text-align: center;
+	float: right;
+	width: 55px;
+}
+
+
+#menu {
+	position: absolute;
+	top: 620px;
+	color: #fff;
+	width: 100%;
+	height: 42px;
+	background-color: #A102C4;
+	-moz-box-shadow:    0px 3px 7px 0px #333;
+	-webkit-box-shadow: 0px 3px 7px 0px #333;
+	box-shadow:         0px 3px 7px 0px #333;
+	z-index: 1000;
+}
+#menu.article {
+	top: 220px;
+}
+#menu ul {
+	list-style-type: none;
+	width: 450px;
+} /** main menu left **/
+#menu ul:first-of-type {
+	margin: 0 auto 0 auto;
+} /** main menu right **/
+#menu ul:last-of-type {
+	margin: 0 auto 0 auto;
+} /** elements in the social menu should be smaller **/
+#menu ul li {
+	display: table-cell;
+	text-align: center;
+	width: 160px;
+}
+#menu ul li a {
+	color: white;
+	font-family: "Aleo","Helvetica",serif;
+	font-size: 1.3em;
+	line-height: 2em;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+}
+#menu ul li a:hover {
+	background-color: #ff00ff;
+}
+#menu ul li.active {
+	background-color: #ad64d4;
+}
+
+
+/* Sections and Sectional Asides
+---------------------------------------------------------------------------------------- */
+header {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	padding: 20px 0 20px 0;
+	margin: 0 0 3em 0;
+}
+
+header > div {
+	position: relative;
+	display: block;
+	width: 792px;
+	margin: 2em auto 0px auto;
+}
+
+header > div:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+section {
+	width: 100%;
+	position: relative;
+	padding: 20px 0 20px 0;
+	margin: 6em 0 3em 0;
+}
+
+/* section:first-of-type {
+	height: 600px;
+	margin: 0 0 3em 0;
+}*/
+
+section > div {
+	position: relative;
+	display: block;
+	width: 792px;
+	margin: 2em auto 0px auto;
+}
+
+section > div:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+section > div > p {
+	text-shadow: 2px 2px #333333;
+	margin-bottom: 1.3em;
+}
+
+aside {
+	width: 160px;
+	float: left;
+	margin-top: 10px;
+	margin-left: -180px;
+}
+
+aside.alt {
+	float: right;
+	margin-top: 0;
+	margin-right: -180px;
+}
+
+aside ul {
+	text-align: right;
+}
+aside ul li {
+
+}
+
+	@media (min-width: 280px) and (max-width: 940px) {
+		aside {
+			position: static;
+			float: none;
+			clear: both;
+			margin-left: 0;
+		}
+		aside.alt {
+			float: none;
+		}
+		aside ul li {
+			text-align: left;
+		}
+
+	}
+
+ul.latestLS {
+	list-style-type: none;
+	text-align: left;
+	font-size: 0.6em;
+}
+ul.latestLS h3 {
+	font: 1.4em "Trebuchet MS",sans-serif;
+}
+
+ul.latestLS li img {
+	width: 150px;
+	height: auto;
+}
+li.link {
+	color: #ff00ff;
+	font: 1.3em "Helvetica",serif;
+	list-style-type: none;
+}
+
+li.link a {
+	color: #ff00ff;
+	text-decoration: none;
+}
+
+li.link a:hover {
+	text-decoration: underline;
+}
+
+li.site {
+	color: #d7d7d7;
+	font: 1.0em "Helvetica",serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	list-style-type: none;
+	padding-bottom: 10px;
+	text-shadow: 1px 1px #333333;
+}
+
+div.samples {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+div.project {
+	width: 240px;
+	/* min-height: 400px; */
+	margin: 0 0 0 0;
+	background: url(../images/bkgd-trans-8e2fc4.png);
+	border-radius: 8px;
+}
+
+div.project:nth-child(odd) {
+	background: url(../images/bkgd-trans-4f53c9.png);
+}
+
+/*
+div.project:last-child {
+	margin-right: 0;
+}
+*/
+
+div.project h4 {
+	font: 1.4em 'Aleo','Trebuchet MS', sans-serif;
+	color: #fff;
+	/*color: #434D6D;*/
+	padding: 10px;
+}
+
+div.project p {
+	font-size: 1.0em;
+	color: #fff;
+	/* color: #434D6D; */
+	padding: 10px;
+}
+
+div.project img {
+	border-radius: 8px 8px 0 0;
+}
+
+/*div.project:after {
+	content: ".";
+	display: block;
+	clear: both;
+}*/
+
+
+/* Drawers and Contents
+---------------------------------------------------------------------------------------- */
+.drawer {
+	width:100%;
+	height:300px;
+	background-color:#333;
+	border-top: 1px solid #000;
+	overflow: auto;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: none;
+}
+
+.drawer ul {
+	list-style: none;
+	padding: 20px;
+	width: 1320px;
+	display: table-cell;
+}
+
+.drawerContents p {
+	font-family: "Trebuchet MS",serif;
+	font-size: 1.0em;
+	line-height: 1.5em;
+}
+
+ul.drawerContents {
+
+}
+
+ul.drawerContents li {
+	vertical-align: top;
+	padding-left: 15px;
+	width: 220px;
+	height: 290px;
+	overflow: hidden;
+	display: table-cell;
+}
+
+ul.drawerContents li.tweet {
+	vertical-align: top;
+	padding-left: 15px;
+	min-width: 180px;
+	height: 290px;
+	overflow: hidden;
+	display: table-cell;
+}
+
+ul.drawerContents li.tweet h3 {
+	font: 1em 'Raleway', 'Trebucet MS', serif;
+}
+
+ul.drawerContents li.homeTweet {
+	width: 200px;
+	height: 200px;
+	padding-top: 10px;
+	padding-right: 10px;
+	background-color: #434d6d;
+	border: 1px solid #fff;
+	border-radius: 3px;
+}
+
+
+/* Articles and Textual Contents
+---------------------------------------------------------------------------------------- */
+header.article {
+	width: 100%;
+	height: 240px;
+	position: relative;
+	padding: 20px 0 0 0;
+	margin: 0 0 0 0;
+}
+
+/*
+.articleHeaderImage {
+	width: 1111px;
+	margin: 0 auto 0 auto;
+}
+*/
+
+article {
+	width: 60%;
+	min-height: 100%;
+	background-color: #fff;
+	padding: 1em 8em 20em 8em;
+	margin: 0 auto 0 auto;
+	opacity: 0.9;
+}
+
+article > h1 {
+	color: #2E334B;
+	font: 3em "Krungthep","Exo","Helvetica",serif;
+	line-height: 1.0em;
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/* text-shadow: 1px 2px #7B28AA; */
+}
+
+article > h2 {
+	color: #2E334B;
+	font: 1.8em 'AleoLight','Trebucet MS', serif;
+	line-height: 1.5em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-shadow: 2px 2px #333333;
+}
+
+article > h3, article > h3 a {
+	color: #2E334B;
+	font: 1.4em 'AleoLight', serif;
+	font-weight: bold;
+	line-height: 1.0em;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+article > p {
+	font-family: "Aleo","Helvetica",serif;
+	font-size: 1.2em;
+	text-indent: 1.6em;
+	color: black;
+	line-height: 1.8em;
+}
+
+article > a {
+	color: #00b1ff;
+}
+
+article > a:hover {
+	color: #00b1ff;
+	text-decoration: underline;
+}
+
+article > b {
+	color: #00b1ff;
+}
+
+article > blockquote > p {
+	color: #333;
+	font: 1.2em 'AleoLight', serif;
+	line-height: 2.0em;
+}
+
+article > pre > code {
+	color: #333;
+}
+
+article > ul {}
+
+article > ul > li {
+	color: #000;
+}
+
+article > table {
+	background-color: #fff;
+	border: 1px solid gray;
+	display: table-cell;
+}
+
+article > th {
+	font: 12px "Trebuchet MS", serif;
+	color: #333;
+	padding: 5px;
+	display: table-cell;
+}
+
+article > tr {}
+
+article > td {
+	font: 12px "Trebuchet MS", serif;
+	color: #333;
+	padding: 5px;
+	display: table-cell;
+}
+
+ul.article-list {
+	list-style-type: none;
+}
+
+.article {
+	color: #fff;
+}
+
+.article p {
+	color: #fff;
+	font: 1.4em "Georgia",serif;
+	text-align: justify;
+	line-height: 1.8em;
+	padding: 0;
+	margin: 0 0 1.4em 0;
+}
+
+.article p.summary {
+	color: #7495dd;
+	text-indent: 0;
+	line-height: 1.6em;
+	font: 1.8em 'Raleway', 'Trebucet MS', serif;
+	font-style: italic;
+	margin: 10px 45px 25px 45px;
+}
+
+.article p.date {
+	font: 1.8em 'Raleway', 'Trebucet MS', serif;
+	text-align: center;
+	text-indent: 0;
+	line-height: 1.6em;
+}
+
+.article span.pullquote {
+	/* Don't do anythig here or the quote inside body of the article will be formatted */
+}
+
+.article div.pullquote {
+	display: block;
+	color: #fff;
+	font: 1.6em "Georgia",serif;
+	text-indent: 0;
+	text-align: left;
+	line-height: 1.5em;
+	width: 33%;
+	float: left;
+	margin: 0 20px 10px 0;
+}
+
+.article div.pullquote.alt {
+	float: right;
+	margin: 0 0 10px 20px;
+}
+
+.article div.figure {
+	text-align: center;
+	margin: 20px auto 20px auto;
+}
+
+.article div.figure img {
+	border: 1px solid #999;
+	background-color: #fff;
+	padding: 10px;
+}
+
+.article div.figure p.caption {
+	font: 1.1em "Source Sans Pro",serif;
+	text-indent: 0;
+	text-align: left;
+	padding: 10px 0 0 0;
+	margin: 0;
+}
+
+/* Footer
+---------------------------------------------------------------------------------------- */
+footer {
+	background-color: #000;
+	padding: 2em;
+	margin: 0;
+}
+
+footer > div {
+	color: #fff;
+	text-align: center;
+}
+
+footer > div > ul {
+	padding-top: 2em;
+}
+
+footer > div > ul > li {
+	display: inline-table;
+	text-align: left;
+	vertical-align: top;
+	width: 20%;
+}
+
+footer > div > ul > li > p {
+	font-size: 1em;
+}
+
+/* IE Fixes (lulz)
+---------------------------------------------------------------------------------------- */
+
+body {
+	word-wrap: break-word;
+}
+
+
+
+/* 3rd Party
+---------------------------------------------------------------------------------------- */
+/* Wufoo */
+
+.info div {
+	color: #00b1ff;
+}
+
+form #form1 {
+
+	background-color: #434d6d;
+
+}
+
+form #form1 ul li {
+	color: #00b1ff;
+}
+
+.wufoo #header {
+	color: #7495dd;
+	font-family: 'Raleway', 'Trebucet MS', serif;
+	line-height: 1.0em;
+}
+
+.ltr {
+	color: #00b1ff;
+}
