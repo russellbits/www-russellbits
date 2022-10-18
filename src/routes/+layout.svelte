@@ -1,13 +1,17 @@
 <!-- +layout.svelte -->
 <script>
+import Nav from '$lib/components/Nav.svelte'
+import SocialLinks from '$lib/components/SocialLinks.svelte'
 import Header from '$lib/components/Header.svelte'
 import '$lib/styles/house.scss'
 import '$lib/styles/entypo.scss'
 </script>
 
+<SocialLinks />
+
 <Header />
 
-<div id="logo">RUSSELL<span class="secondary">BITS</span></div>
+<Nav />
 
 <main>
   <slot />

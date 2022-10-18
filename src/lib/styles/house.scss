@@ -3,6 +3,10 @@ font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
 
+/* TODOS:
+1. Break out variables, screen breakpoints, article styles, etc. into individual SCSS
+2.
+
 /* Reset
 ---------------------------------------------------------------------------------------- */
 
@@ -18,6 +22,12 @@ body {
 }
 
 /* now I'm working with a clean slate! */
+
+/* Variables
+---------------------------------------------------------------------------------------- */
+$primaryLogo: rgb(73, 76, 166);
+$secodnaryLogo: rgb(129, 42, 179);
+
 
 /* Fonts
 ---------------------------------------------------------------------------------------- */
@@ -134,7 +144,7 @@ main {
 #logo {
 	font: 10em "Rubik Black", sans-serif;
 	line-height: 0.5em;
-	color: #494CA6;
+	color: $primaryLogo;
 	width: 100%;
 	text-align: center;
 	text-shadow: 4px 4px 4px #333333;
@@ -144,7 +154,13 @@ main {
 }
 
 #logo .secondary {
-	color: #812AB2;
+	color: $secodnaryLogo;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	#logo {
+		font-size: 3em;
+	}
 }
 
 h1 {
@@ -247,9 +263,11 @@ ul#socialbits li {
 	box-shadow:         0px 3px 7px 0px #333;
 	z-index: 1000;
 }
+
 #menu.article {
 	top: 220px;
 }
+
 #menu ul {
 	list-style-type: none;
 	width: 450px;
@@ -267,7 +285,7 @@ ul#socialbits li {
 }
 #menu ul li a {
 	color: white;
-	font-family: "Aleo","Helvetica",serif;
+	font-family: "Aleo", "Helvetica", serif;
 	font-size: 1.3em;
 	line-height: 2em;
 	display: block;
@@ -353,6 +371,7 @@ aside.alt {
 aside ul {
 	text-align: right;
 }
+
 aside ul li {
 
 }
@@ -543,16 +562,23 @@ header.article {
 */
 
 article {
-	width: 60%;
 	min-height: 100%;
-	background-color: #fff;
-	padding: 1em 8em 20em 8em;
-	margin: 0 auto 0 auto;
+	width: 60em;
+	color: white;
+	margin: 0 auto;
 	opacity: 0.9;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	article {
+		width: 90%;
+		padding: 0.3em;
+		background-color: rgba(120,120,120,0.5);
+	}
+}
+
 article > h1 {
-	color: #2E334B;
+	color: white;
 	font: 3em "Krungthep","Exo","Helvetica",serif;
 	line-height: 1.0em;
 	text-align: left;
@@ -583,7 +609,6 @@ article > p {
 	font-family: "Aleo","Helvetica",serif;
 	font-size: 1.2em;
 	text-indent: 1.6em;
-	color: black;
 	line-height: 1.8em;
 }
 

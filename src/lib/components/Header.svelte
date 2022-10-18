@@ -1,50 +1,27 @@
-<!-- Header.svelte -->
+<script>
+import Introduction from '$lib/components/Introduction.svelte'
+</script>
 
-<ul id="socialbits">
-	<li><a href="http://pinterest.com/belovedleader"><i class="glyph-pinterest glyph-white"></i></a></li>
-	<li><a href="http://github.com/russellbits"><i class="glyph-github glyph-white"></i></a></li>
-	<li><a href="http://instagram.com/belovedleader"><i class="glyph-instagram glyph-white"></i></a></li>
-	<li><a href="http://twitter.com/belovedleader"><i class="glyph-twitter glyph-white"></i></a></li>
-</ul>
+<header>
+	<a id="home" name="home"></a>
 
-<!--<header>
-  <nav>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/blog">Blog</a>
-      </li>
-      <li>
-        <a href="/about">About</a>
-      </li>
-      <li>
-        <a href="/contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-</header>-->
+	<div id="logo">RUSSELL<span class="secondary">BITS</span></div>
 
-<style lang="scss">
-header {
-  padding: 1rem;
-  background: rgb(147, 37, 189);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+	<div>
+		<h1>Hello. I am R. E. Warner,</h1>
 
-ul {
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  gap: 1rem;
-}
+		<aside>
+			<ul>
+				<li class="link"><a id="resume" href="/assets/pdfs/resume-rewarner-221128.pdf" alt="resume image link">Just the Facts</a></li>
+				<li class="site">Resume (PDF)<br><span style="font-size:smaller;">Updated 11.28.2021</span></li>
+				<li class="link"><a href="http://twitter.com/belovedleader">@belovedleader</a></li>
+				<li class="site">Twitter</li>
+				<!--<li class="link"><a href="contact.html">via email</a></li>
+				<li class="site">Web Contact Form</li>-->
+			<ul>
+		</ul></ul></aside>
 
-a {
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-}
-</style>
+		<Introduction />
+
+	</div>
+</header>
